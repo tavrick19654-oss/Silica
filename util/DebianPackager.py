@@ -486,20 +486,20 @@ class DebianPackager(object):
 
                         repo_settings = PackageLister.GetRepoSettings(self)
                         # Ask for name
-                        output['name'] = input("What should we name this package? ")
+                        output['name'] = "eeee"
                         # Automatically generate a bundle ID from the package name.
                         domain_breakup = repo_settings['cname'].split(".")[::-1]
                         only_alpha_regex = re.compile('[^a-zA-Z]')
                         machine_safe_name = only_alpha_regex.sub("", output['name']).lower()
                         output['bundle_id'] = ".".join(str(x) for x in domain_breakup) + "." + machine_safe_name
-                        output['tagline'] = input("What is a brief description of the package? ")
+                        output['tagline'] = "mmmm"
                         output['homepage'] = "https://" + repo_settings['cname']
                         # I could potentially default this to what is in settings.json but attribution may be an issue.
-                        output['developer']['name'] = input("Who made this package? This is likely your name. ")
-                        output['developer']['email'] = input("What is the author's email address? ")
-                        output['works_min'] = input("What is the lowest iOS version the package works on? ")
-                        output['works_max'] = input("What is the highest iOS version the package works on? ")
-                        output['featured'] = input("Should this package be featured on your repo? (true/false) ")
+                        output['developer']['name'] = "why"
+                        output['developer']['email'] = "dogs"
+                        output['works_min'] = "cats"
+                        output['works_max'] = "memes"
+                        output['featured'] = "true"
                     PackageLister.CreateFolder(self, "Packages/" + folder + "/silica_data/")
                     PackageLister.CreateFile(self, "Packages/" + folder + "/silica_data/index.json", json.dumps(output))
 
