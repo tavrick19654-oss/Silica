@@ -361,7 +361,7 @@ class DebianPackager(object):
                         try:
                             output['tagline'] = deb.headers['Description']
                         except Exception:
-                            output['tagline'] = input("What is a brief description of the package? ")
+                            output['tagline'] = "abagaba"
                         try:
                             output['homepage'] = deb.headers['Homepage']
                         except Exception:
@@ -370,16 +370,14 @@ class DebianPackager(object):
                             remove_email_regex = re.compile('<.*?>')
                             output['developer']['name'] = remove_email_regex.sub("", deb.headers['Author'])
                         except Exception:
-                            output['developer']['name'] = input("Who originally made this package? This may be"
-                                                                " your name. ")
-                        output['developer']['email'] = input("What is the original author's email address? ")
+                            output['developer']['name'] = "waba"
+                        output['developer']['email'] = "taba"
                         try:
                             remove_email_regex = re.compile('<.*?>')
                             output['maintainer']['name'] = remove_email_regex.sub("", deb.headers['Maintainer'])
                         except Exception:
-                            output['maintainer']['name'] = input("Who maintains this package now?"
-                                                                 " This is likely your name. ")
-                        output['maintainer']['email'] = input("What is the maintainer's email address? ")
+                            output['maintainer']['name'] = "2348"
+                        output['maintainer']['email'] = "EEEEE"
                         try:
                             output['sponsor']['name'] = remove_email_regex.sub("", deb.headers['Sponsor'])
                         except Exception:
@@ -437,11 +435,10 @@ class DebianPackager(object):
                         except Exception:
                             pass
                         # These still need data.
-                        output['works_min'] = input("What is the lowest iOS version the package works on? ")
-                        output['works_max'] = input("What is the highest iOS version the package works on? ")
-                        output['featured'] = input("Should this package be featured on your repo? (true/false) ")
-                        set_tint = input("What would you like this package's tint color to be? To keep it at"
-                                         " the default, leave this blank: ")
+                        output['works_min'] = "8.4.1"
+                        output['works_max'] = "6.1.3"
+                        output['featured'] = "true"
+                        set_tint = ""
                         if set_tint != "":
                             output['tint'] = set_tint
                         print("All done! Please look over the generated \"index.json\" file and consider populating the"
