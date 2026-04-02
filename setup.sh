@@ -18,7 +18,7 @@ if [ ! -f .is_setup ]; then
     echo "Installed all required packages! Now, just a few questions about you."
     echo ""
     silica_repo_name=ORepo
-    silica_repo_description=Legacy iOS repo
+    silica_repo_description="Legacy iOS repo"
     printf "What domain are you going to host the repo on (don't include https://, just the domain)? "
     read silica_repo_cname
     printf "What is *your* name? "
