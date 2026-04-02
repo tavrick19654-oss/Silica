@@ -71,7 +71,7 @@ If you already downloaded Silica via your web browser, delete it. We'll redownlo
 Once you are in the directory you want to download Silica to, run this command:
 
 ```bash
-git clone https://github.com/Shugabuga/Silica/
+git clone https://github.com/tavrick19654-oss/Silica.git
 ```
 
 This will create a new folder for Silica.
