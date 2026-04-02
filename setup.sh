@@ -17,8 +17,7 @@ if [ ! -f .is_setup ]; then
     fi
     echo "Installed all required packages! Now, just a few questions about you."
     echo ""
-    printf "What should your repo be called? "
-    read silica_repo_name
+    silica_repo_name=ORepo
     printf "Can you briefly describe what your repo is about? "
     read silica_repo_description
     printf "What domain are you going to host the repo on (don't include https://, just the domain)? "
