@@ -46,7 +46,7 @@ def main():
     PackageLister.CreateFolder("docs/api")
 
     # Make sure all index.json files are generated (if using DEBs)
-    DebianPackager.CheckForSilicaData()
+    # DebianPackager.CheckForSilicaData()
 
     tweak_release = PackageLister.GetTweakRelease()
     repo_settings = PackageLister.GetRepoSettings()
